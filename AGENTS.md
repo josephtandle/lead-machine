@@ -1,6 +1,6 @@
 # The Lead Machine (Codex / Gemini CLI / other agents)
 
-If you are reading this file, you are probably Codex, Gemini CLI, or another AI coding agent. The full spec is in `CLAUDE.md` in this folder, and every rule in it is binding on you exactly as written, especially: nothing is ever sent by this system, and easy mode never asks more than one question.
+If you are reading this file, you are probably Codex, Gemini CLI, or another AI coding agent. The full spec is in `CLAUDE.md` in this folder, and every rule in it is binding on you exactly as written, especially: nothing is ever sent by this system, and cold outreach never asks more than one business question.
 
 This folder's commands live in `.claude/commands/` as plain instruction files, not real slash commands. When the person uses plain words, read the matching file and follow it:
 

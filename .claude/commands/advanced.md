@@ -1,4 +1,4 @@
-Entry point for advanced mode. Only run this when the person says "advanced".
+Entry point for warm network. Only run this when the person says "advanced".
 
 Explain in 3 short lines:
 1. With your permission, it uses your own LinkedIn and inbox in your browser
@@ -9,7 +9,7 @@ Explain in 3 short lines:
 3. Nothing is ever sent automatically. You approve every message by number
    and send it yourself.
 
-Ask: "Want it? Yes or no." If no, stay in easy mode and say nothing more about
+Ask: "Want it? Yes or no." If no, stay in cold outreach and say nothing more about
 it this session. If yes:
 
 (a) CONNECT. Walk through one step at a time, waiting for "done" before the
@@ -29,6 +29,6 @@ does not already cover.
 
 (c) THE LOOP. From here on, when the person says "hunt N", "screen", or
 "draft", read and run the matching command file (hunt.md, screen.md,
-draft.md). When advanced mode is connected, hunt may also read the person's
+draft.md). When warm network is connected, hunt may also read the person's
 own LinkedIn connections, post comments, and inbox replies through the
 connected browser, in addition to data/Connections.csv and anything pasted in.

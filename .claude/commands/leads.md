@@ -1,4 +1,7 @@
-Easy mode. Target count: $ARGUMENTS (default 25 if not given).
+Cold outreach. If MY-BUSINESS.md has no "Mode:" line yet, first ask: "What do
+you want: cold outreach (25 new leads from the web), warm network (people you
+already know, via your own LinkedIn and inbox), or both?" Save the answer as
+"Mode:" in MY-BUSINESS.md. Warm only: run advanced.md instead. Target count: $ARGUMENTS (default 25 if not given).
 
 STEP 0: Check what you already know before asking anything.
 Read MY-BUSINESS.md if it exists and skip to STEP 1. Otherwise look at this
@@ -26,7 +29,9 @@ STEP 2: Show the list.
 Show a numbered list: name, what they do, why they fit, how to reach them.
 If and only if <N> leads were found, then: "That is <N>. Say 'more' for a fresh
 <N>, no repeats." Add once, lightly:
-"There's also an advanced mode that works from your own LinkedIn and inbox.
-Say 'advanced' any time." Never push it again after saying it once. If fewer
+If Mode is both: "Next up is your warm network. Say 'warm' when you are
+ready." If Mode is cold, once and lightly: "There's also a warm network mode
+that works from your own LinkedIn and inbox. Say 'warm' any time." Never push
+it again. If fewer
 than <N> were found after allowed retries, state the shortfall and why before
 showing the partial list.

@@ -1,3 +1,8 @@
+## 2.1.0 (2026-09-29)
+- First question on paste: cold outreach, warm network, or both. Cold runs first and returns its 25 before anything else; "both" flows straight into warm network afterwards; "warm" skips ahead.
+- Modes renamed: Easy is now Cold Outreach, Advanced is now Warm Network ("advanced" still works as a word).
+- Business questions are asked only when it cannot work out what you sell and who you serve.
+
 ## 2.0.1 (2026-09-29)
 - Lead finder: country editions of directories (houzz.com.au, yelp.co.uk) are blocked like their .com parents.
 - Lead finder: when you name a place, a business must mention that place on its own site or domain to qualify. A Brisbane search no longer returns Bucharest.

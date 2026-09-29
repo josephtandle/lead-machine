@@ -4,14 +4,14 @@ From Joe Che's AI class. A small system that finds you real leads who fit
 your business, and never repeats a name. It never sends anything. You read
 every result and reach out yourself.
 
-Version: 2.0.1 (see VERSION). Updates: https://github.com/josephtandle/lead-machine
+Version: 2.1.0 (see VERSION). Updates: https://github.com/josephtandle/lead-machine
 
 ## The two ways to run it
 
 **Way 1, most people.** Open `PASTE-INTO-CHATGPT-OR-CLAUDE.txt`, select all,
 paste it into ChatGPT or Claude in your browser, and send. No install for this
 kit, about 2 minutes, and an existing ChatGPT or Claude account is required.
-It runs the same easy mode described below, right there in the chat.
+It runs the same cold outreach described below, right there in the chat.
 
 **Way 2, Claude Code, Codex, or Gemini CLI.** Open this whole folder in that
 tool and say "go". It remembers your business and every lead you have been
@@ -20,12 +20,14 @@ same setup question twice.
 
 ## What the modes do
 
-**Easy mode (the default).** Figures out what you sell and who you serve from
+**It asks one thing first:** cold outreach, warm network, or both. Cold runs first whenever there is any doubt.
+
+**Cold outreach (the default).** Figures out what you sell and who you serve from
 this folder if it can, otherwise asks you exactly one question. You can answer in words or just paste your website link. Then finds you
 25 real people or businesses who fit, each with a public way to reach them,
 and shows them as a plain numbered list. Say "more" any time for a fresh 25.
 
-**Advanced mode (say "advanced" any time).** Connects to your own LinkedIn and
+**Warm network (pick it at the start, or say "warm" any time).** Connects to your own LinkedIn and
 inbox through your browser, so it can work from people you already have a
 real connection with: your connections, the people who comment on your posts,
 the people who reply to you. It finds the ones who have shown, in their own
@@ -35,16 +37,16 @@ in your voice. You approve each one by number, then copy and send it yourself.
 
 ## The three rules
 
-1. Nobody appears without proof. In easy mode, that means a real public
-   contact route the business itself put up. In advanced mode, that means a
+1. Nobody appears without proof. In cold outreach, that means a real public
+   contact route the business itself put up. In warm network, that means a
    quoted line showing they have the problem you solve.
-2. Never message clients, family, or close friends. In advanced mode, that
+2. Never message clients, family, or close friends. In warm network, that
    list lives in `data/do-not-contact.csv`, yours to fill; when unsure, the
    system drops the person.
 3. Never send a message that has not been read and approved word for word.
    This system has no send capability. You always send it yourself.
 
-## Daily limits (advanced mode)
+## Daily limits (warm network)
 
 LinkedIn: 20 to 25 new people a day, spread out. WhatsApp: small batches, only
 people who already have your number or messaged you first. Instagram: a
@@ -53,7 +55,7 @@ handful a day. These caps hold even if you push back on them.
 ## Files in this folder
 
 - `START-HERE.txt`, read this first.
-- `PASTE-INTO-CHATGPT-OR-CLAUDE.txt`, the browser version of easy mode.
+- `PASTE-INTO-CHATGPT-OR-CLAUDE.txt`, the browser version of cold outreach.
 - `CLAUDE.md`, the full spec the folder version loads and follows.
 - `AGENTS.md`, the entry point for Codex and Gemini CLI.
 - `.claude/commands/`, one instruction file per command (leads, advanced,
@@ -62,7 +64,7 @@ handful a day. These caps hold even if you push back on them.
   mode leads.
 - `templates/`, empty CSVs that get copied into `data/` on first setup.
 - `MY-BUSINESS.md`, created in this folder when the tool learns your business.
-- `data/`, where found leads and advanced-mode files (candidates, screened,
+- `data/`, where found leads and warm-network files (candidates, screened,
   queue, already-messaged) get written. This folder is yours; nothing in it is
   shared anywhere.
 - `VERSION`, the current version number of this kit.

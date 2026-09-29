@@ -9,15 +9,16 @@ WAY 1: MOST PEOPLE (2 minutes, no install)
 1. Open PASTE-INTO-CHATGPT-OR-CLAUDE.txt in this folder.
 2. Select all the text and copy it.
 3. Open ChatGPT or Claude in your browser, start a new chat, paste it in, send.
-4. If it cannot work out your business from the chat, answer its one question
-   or paste your website link. You get 25 leads back in the chat.
+4. It asks: cold outreach, warm network, or both. Say "cold" (or "both").
+   If it cannot work out your business from the chat, answer its one
+   question or paste your website link. You get 25 leads back in the chat.
 5. Say "more" any time for another fresh 25, no repeats.
 
 WAY 2: IF YOU USE CLAUDE CODE, CODEX, OR GEMINI CLI
 1. Open this whole folder in that tool.
 2. Say "go".
-3. It figures out your business from this folder if it can, asks one question
-   if it can't, then hands you 25 leads.
+3. It asks cold, warm, or both, figures out your business from this folder
+   if it can, asks one question if it can't, then hands you 25 leads.
 4. It remembers everyone you have already been shown, across days, so "more"
    never repeats a name.
 
