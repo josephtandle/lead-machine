@@ -5,10 +5,11 @@ no signup, no guessed contact info. You approve and send everything yourself.
 
 TWO WAYS TO RUN IT
 
-WAY 1: MOST PEOPLE (2 minutes, no install)
-1. Open PASTE-INTO-CHATGPT-OR-CLAUDE.txt in this folder.
-2. Select all the text and copy it.
-3. Open ChatGPT or Claude in your browser, start a new chat, paste it in, send.
+WAY 1: MOST PEOPLE (1 minute, no install)
+1. Unzip the download.
+2. Open ChatGPT or Claude in your browser and start a new chat.
+3. Drag PASTE-INTO-CHATGPT-OR-CLAUDE.txt straight into the chat and send.
+   (No dragging? Open the file, select all, copy, and paste it in instead.)
 4. It asks: cold outreach, warm network, or both. Say "cold" (or "both").
    If it cannot work out your business from the chat, answer its one
    question or paste your website link. You get 25 leads back in the chat.

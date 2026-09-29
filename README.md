@@ -4,14 +4,16 @@ From Joe Che's AI class. A small system that finds you real leads who fit
 your business, and never repeats a name. It never sends anything. You read
 every result and reach out yourself.
 
-Version: 2.1.0 (see VERSION). Updates: https://github.com/josephtandle/lead-machine
+Version: 2.1.1 (see VERSION). Latest version: https://workshop.mastermindshq.business/lead-machine-starter.zip
 
 ## The two ways to run it
 
-**Way 1, most people.** Open `PASTE-INTO-CHATGPT-OR-CLAUDE.txt`, select all,
-paste it into ChatGPT or Claude in your browser, and send. No install for this
-kit, about 2 minutes, and an existing ChatGPT or Claude account is required.
-It runs the same cold outreach described below, right there in the chat.
+**Way 1, most people.** Unzip the download, open ChatGPT or Claude in your
+browser, and drag `PASTE-INTO-CHATGPT-OR-CLAUDE.txt` straight into the chat and
+send. (No dragging? Open the file, select all, copy, and paste it in instead.)
+No install for this kit, about 1 minute, and an existing ChatGPT or Claude
+account is required. It runs the same cold outreach described below, right
+there in the chat.
 
 **Way 2, Claude Code, Codex, or Gemini CLI.** Open this whole folder in that
 tool and say "go". It remembers your business and every lead you have been

@@ -1,3 +1,7 @@
+## 2.1.1 (2026-09-30)
+- Way 1 is now drag-and-drop: unzip, drag PASTE-INTO-CHATGPT-OR-CLAUDE.txt into the chat, send. Copy-paste kept as a fallback. Added a run-me header so it executes when dropped in, on ChatGPT and Claude.
+- Warm network works from any account open in the browser, not just LinkedIn and inbox: Instagram, X, Facebook, DMs. Wording broadened across the prompt, folder guide, PDF, and email.
+
 ## 2.1.0 (2026-09-29)
 - First question on paste: cold outreach, warm network, or both. Cold runs first and returns its 25 before anything else; "both" flows straight into warm network afterwards; "warm" skips ahead.
 - Modes renamed: Easy is now Cold Outreach, Advanced is now Warm Network ("advanced" still works as a word).
