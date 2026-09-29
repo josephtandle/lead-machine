@@ -129,9 +129,16 @@ const BLOCKED_DOMAINS = [
   'reviewsolicitors.co.uk',
 ];
 
+const BLOCKED_BRANDS = new Set(
+  BLOCKED_DOMAINS.map((b) => b.split('.')[0]).filter((root) => root.length >= 4)
+);
+
 function isBlockedDomain(domain) {
   const d = domain.toLowerCase();
-  return BLOCKED_DOMAINS.some((b) => d === b || d.endsWith('.' + b));
+  if (BLOCKED_DOMAINS.some((b) => d === b || d.endsWith('.' + b))) return true;
+  // Country editions of the same directories (houzz.com.au, yelp.co.uk, ...).
+  const labels = d.split('.');
+  return labels.length >= 2 && BLOCKED_BRANDS.has(labels[0]);
 }
 
 function canonicalDomain(hostname) {
@@ -183,11 +190,28 @@ function targetTerms(who) {
   return [...new Set(specific.length > 0 ? specific : terms)];
 }
 
-function isRelevantToTarget(name, description, homepageHtml, who) {
-  const terms = targetTerms(who);
-  if (terms.length === 0) return true;
-  const text = `${name} ${description} ${visibleText(homepageHtml)}`.toLowerCase();
-  return terms.some((term) => text.includes(term));
+// "wedding photographers in Austin Texas" -> niche "wedding photographers", place "austin texas".
+function splitWho(who) {
+  const m = who.match(/^(.*?)\s+(?:in|near|around|based in|from)\s+(.+)$/i);
+  if (!m) return { niche: who, place: '' };
+  return { niche: m[1], place: m[2] };
+}
+
+function placeTerms(place) {
+  const raw = place.toLowerCase().match(/[a-z]{2,}/g) || [];
+  return [...new Set(raw.filter((t) => !['the', 'and', 'area', 'region', 'greater'].includes(t)))];
+}
+
+function isRelevantToTarget(name, description, homepageHtml, who, domain = '') {
+  const { niche, place } = splitWho(who);
+  const terms = targetTerms(niche);
+  const text = `${domain} ${name} ${description} ${visibleText(homepageHtml)}`.toLowerCase();
+  if (terms.length > 0 && !terms.some((term) => text.includes(term))) return false;
+  // When the person named a place, the business has to mention it somewhere on
+  // its own site (or in its domain). Stops a Brisbane search returning Bucharest.
+  const places = placeTerms(place);
+  if (places.length > 0 && !places.some((t) => text.includes(t))) return false;
+  return true;
 }
 
 // ---------------------------------------------------------------------------
@@ -640,7 +664,7 @@ async function fetchPageSafe(url) {
 
 const CONTACT_PATHS = ['/contact', '/contact-us', '/about', '/about-us'];
 
-async function extractLeadFromDomain(domain, sourceQuery) {
+async function extractLeadFromDomain(domain, sourceQuery, who = sourceQuery) {
   if (!isPublicHostname(domain)) return null;
   const homepageUrl = `https://${domain}/`;
   let homepageHtml = await fetchPageSafe(homepageUrl);
@@ -658,7 +682,7 @@ async function extractLeadFromDomain(domain, sourceQuery) {
     extractMeta(homepageHtml, 'og:description') ||
     extractMeta(homepageHtml, 'description') ||
     '';
-  if (!isRelevantToTarget(name, description, homepageHtml, sourceQuery)) return null;
+  if (!isRelevantToTarget(name, description, homepageHtml, who, domain)) return null;
 
   let emailCandidates = extractEmailsFromMailto(homepageHtml);
   let bookingLink = findBookingLink(homepageHtml, baseUrl);
@@ -953,7 +977,7 @@ async function main() {
       const results = await runPool(
         batch,
         async ({ domain, sourceQuery }) => {
-          const lead = await extractLeadFromDomain(domain, sourceQuery);
+          const lead = await extractLeadFromDomain(domain, sourceQuery, args.who);
           return lead;
         },
         CONCURRENCY

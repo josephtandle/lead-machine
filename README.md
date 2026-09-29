@@ -4,7 +4,7 @@ From Joe Che's AI class. A small system that finds you real leads who fit
 your business, and never repeats a name. It never sends anything. You read
 every result and reach out yourself.
 
-Version: 2.0.0 (see VERSION). Updates: https://github.com/josephtandle/lead-machine
+Version: 2.0.1 (see VERSION). Updates: https://github.com/josephtandle/lead-machine
 
 ## The two ways to run it
 
