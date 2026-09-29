@@ -1,0 +1,30 @@
+THE LEAD MACHINE - START HERE
+
+This folder finds you 25 real leads who fit your business. No email needed,
+no signup, no guessed contact info. You approve and send everything yourself.
+
+TWO WAYS TO RUN IT
+
+WAY 1: MOST PEOPLE (2 minutes, no install)
+1. Open PASTE-INTO-CHATGPT-OR-CLAUDE.txt in this folder.
+2. Select all the text and copy it.
+3. Open ChatGPT or Claude in your browser, start a new chat, paste it in, send.
+4. If it cannot work out your business from the chat, answer its one question
+   or paste your website link. You get 25 leads back in the chat.
+5. Say "more" any time for another fresh 25, no repeats.
+
+WAY 2: IF YOU USE CLAUDE CODE, CODEX, OR GEMINI CLI
+1. Open this whole folder in that tool.
+2. Say "go".
+3. It figures out your business from this folder if it can, asks one question
+   if it can't, then hands you 25 leads.
+4. It remembers everyone you have already been shown, across days, so "more"
+   never repeats a name.
+
+WHAT IT NEVER DOES
+
+It never sends a message, an email, or a DM on its own. It only ever finds
+people and shows you how to reach them yourself. You read every name, you
+decide, you send it yourself from your own accounts.
+
+If a terminal is not your thing, just use Way 1. Both ways do the same job.
